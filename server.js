@@ -65,6 +65,7 @@ function Createtemplate (data){
          <a href="/">Homepage</a>
      </div>
      <hr/> 
+     ${cont}
  </body>
  </html>`;
  return htmlcontent;
