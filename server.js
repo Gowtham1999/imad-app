@@ -68,7 +68,7 @@ function Createtemplate (data){
      ${cont}
  </body>
  </html>`;
- return htmlcontent;
+ return htmltemplate;
 }
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
