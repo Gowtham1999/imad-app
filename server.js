@@ -52,7 +52,7 @@ var cont = {
 
 function Createtemplate (data){
     var cont=data.cont;
-    var htmltempate = `<!DOCTYPE html>
+    var htmltemplate = `<!DOCTYPE html>
                      <html>
                      <head>
                 <title>Articleone</title>
