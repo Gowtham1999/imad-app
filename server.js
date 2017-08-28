@@ -53,7 +53,7 @@ var cont = {
 };
 
 function Createtemplate (data){
-    var cont=data.cont;
+    var content=data.content;
     var htmltemplate = `<!DOCTYPE html>
                      <html>
                      <head>
