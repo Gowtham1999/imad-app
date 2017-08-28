@@ -5,7 +5,8 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 var cont = {
-     articleone:` <div class="block">
+     articleone:{
+     content:` <div class="block">
      <h1>Articleone</h1>
      <div>19 Jan 1999</div>
      <p>
@@ -25,8 +26,9 @@ var cont = {
        <br/>
        Its just the beginning.
      </p>
-     </div>`,
-     articletwo:` <div class="block">
+     </div>`},
+     articletwo:{
+      content:` <div class="block">
      <h1>Articleone</h1>
      <div>19 Jan 1999</div>
      <p>
@@ -46,7 +48,7 @@ var cont = {
        <br/>
        Its just the beginning.
      </p>
-     </div> `
+     </div> `}
      
 };
 
@@ -65,7 +67,7 @@ function Createtemplate (data){
          <a href="/">Homepage</a>
      </div>
      <hr/> 
-     ${cont}
+     ${content}
  </body>
  </html>`;
  return htmltemplate;
