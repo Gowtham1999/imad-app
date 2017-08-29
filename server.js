@@ -4,81 +4,11 @@ var path = require('path');
 
 var app = express();
 app.use(morgan('combined'));
-var cont = {
-     articleone:{
-     content:` <div class="block">
-     <h1>Articleone</h1>
-     <div>19 Jan 1999</div>
-     <p>
-       This is the content of the article one.
-       Its just the beginning.
-     </p>
-     <p>
-       This is the content of the article one.
-       Its just the beginning.
-     </p>
-     <p>
-       This is the content of the article one.
-       Its just the beginning.
-     </p>
-     <p>
-       This is the content of the article one.
-       <br/>
-       Its just the beginning.
-     </p>
-     </div>`},
-     articletwo:{
-      content:` <div class="block">
-     <h1>Articleone</h1>
-     <div>19 Jan 1999</div>
-     <p>
-       This is the content of the article one.
-       Its just the beginning.
-     </p>
-     <p>
-       This is the content of the article one.
-       Its just the beginning.
-     </p>
-     <p>
-       This is the content of the article one.
-       Its just the beginning.
-     </p>
-     <p>
-       This is the content of the article one.
-       <br/>
-       Its just the beginning.
-     </p>
-     </div> `}
-     
-};
 
-function Createtemplate (data){
-    var content=data.content;
-    var htmltemplate = `<!DOCTYPE html>
-                     <html>
-                     <head>
-                <title>Articleone</title>
-     <meta name="viewport" content="width=device-width,initial-scale=1"/>
-     <link href="/ui/style.css" rel="stylesheet" />
- </head> 
-
- <body>
-     <div>
-         <a href="/">Homepage</a>
-     </div>
-     <hr/> 
-     ${content}
- </body>
- </html>`;
- return htmltemplate;
-}
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
-app.get('/:article',function(req,res){
-    var article=req.params.article;
-   res.send(Createtemplate(cont[article])); 
-});
+
 
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
@@ -87,7 +17,7 @@ app.get('/ui/main.js',function (req,res){
     res.sendFile(path.join(__dirname,'ui','main.js'));
 });
 
-app.get('/ui/madi.png', function (req, res) {
+app.get('https://lh3.googleusercontent.com/-vjLoqH3Md6w/V6SlvGbSjaI/AAAAAAAAA5E/36bMsynwhdkE2IZrPr42vOydCrvF1JjfQCEwYBhgL/w140-h140-p/crop_ContactPhoto-IMG_20141006_180535.jpg', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
 });
 
