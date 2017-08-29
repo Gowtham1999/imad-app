@@ -2,31 +2,7 @@ body {
     font-family: sans-serif;
     background-color: lightgrey;
     margin-top: 75px;
+    text-align:center;
 }
-
-.center {
-    text-align: center;
-}
-
-.text-big {
-    font-size: 300%;
-}
-
-.bold {
-    font-weight: bold;
-}
-
-.img-medium {
-    height: 200px;
-}
- .block{
-         color:grey;
-         font-family:sans-serif;
-         background-color:purple;
-         margin:0 auto;
-         padding-top: 70px;
-         padding-left: 20px;
-         padding-right: 20px;
-     }
 
 
