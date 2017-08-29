@@ -2,7 +2,7 @@ console.log('Loaded!');
 var img = document.getElementById('madi');
 var margin = 0;
 function moveright(){
-    margin = margin + 1;
+    margin = margin + 0.001;
     img.style.marginLeft=margin + "px";
 }
 img.onclick = function(){
