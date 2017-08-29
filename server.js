@@ -20,6 +20,14 @@ app.get('/ui/main.js',function (req,res){
 app.get('https://lh3.googleusercontent.com/-vjLoqH3Md6w/V6SlvGbSjaI/AAAAAAAAA5E/36bMsynwhdkE2IZrPr42vOydCrvF1JjfQCEwYBhgL/w140-h140-p/crop_ContactPhoto-IMG_20141006_180535.jpg', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
 });
+var button = document.getElementById('counter');
+var counter = 0;
+button.onclick = function(){
+app.get("/counter", function(req,res){
+    counter=counter+1;
+   res.send(counter); 
+});
+};
 
 
 // Do not change port, otherwise your app won't run on IMAD servers
