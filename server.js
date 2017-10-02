@@ -10,14 +10,6 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-function hash('input','salt'){
-    var hashed=crypto.
-}
-
-app.get('/hash/:password',function(req,res){
-    var hashstring = hash(req.params.input,'this is hashed string'
-    res.send(hashedstring);
-})
 
 
 app.get('/ui/style.css', function (req, res) {
